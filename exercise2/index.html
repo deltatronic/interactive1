@@ -1,0 +1,198 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
+
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+	<title>
+		Exercise 2 - Card
+	</title>
+	<style>
+
+		body {
+		  font-family: 'Noto Sans', sans-serif;
+		}
+
+		.card {
+			transition: all 0.5s ease; /* transition the response of the card */
+			text-align: center;
+			width: 200px;
+			height: 350px;
+			border:1px solid #EEE;
+			margin: 50px auto;
+			background-color: #333;
+			font-size: 12px;
+			color: #CCC;
+		}
+
+		.logo {
+			padding: 30px;
+		}
+
+		.logo img {
+			vertical-align: middle;
+			width: 60px;
+			border-radius: 50%;
+			border:1px solid #EEE;
+			position: relative;
+			top:-3px;
+		}
+
+		.content {
+			height: 100%;
+			position: relative;
+		}
+
+		.name {
+			color: #EEE;
+			font-size: 16px;
+			font-weight: 700;
+			padding: 5px 0 0;
+			line-height: 1.0em;
+		}
+
+		.contact {
+			padding: 20px 0;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+
+		.bio{
+			display: none; /*this will disapear the element*/
+			float:right;
+			width:25%;
+			font-style:italic;
+			padding:10px;
+
+		}
+
+
+		/* changing the media screen response */
+		@media screen and (min-width: 768px) {
+			.card{
+				text-align:left;
+				width:700px;
+				height:350px;
+				background-color:#FB5B1F;
+				color:#000;
+			}
+
+			.name { 
+				color:#000;
+				font-size:28px;
+				font-weight:700; 
+
+			}
+
+			.logo{
+				float:left;
+				padding:20px;
+			}
+
+			.text{
+				float:left;
+				padding:20px 5px;
+
+			}
+
+			.contact {
+				font-size:20px;
+				padding-left:180px;
+				bottom:20px;
+			}
+		}
+
+		@media screen and (min-width: 900px) {
+			.card {
+				background-color:#b7fedf;
+				transform:rotate(-3deg);
+				width:900px;
+				height:;
+			}
+		}
+
+		@media screen and (min-width: 1200px) {
+			.card{
+				background-color:#ffff00;
+				transform: rotate(3deg);
+
+			}
+
+			.bio {
+				display:block; /* shows the element */
+				float:right;
+				width:25%;
+				font-style:italic;
+				padding:10px;
+			}
+		}
+
+		@media screen and (min-width: 1300px) {
+			.card{
+				background-color:#6a8b3c;
+				transform: rotate(6deg);
+				width:800px
+				height:800px;
+				border-radius:50%;
+			}
+
+			.name{ 
+				position:relative;
+
+			}
+
+			.bio{
+				display: block;
+    			float: right;
+    			width: 25%;
+  		        font-style: italic;
+ 			    padding: 87px;
+			}
+
+			.text {
+    		float: left;
+   		    padding: 70px 37px;
+
+   			}
+
+   		    .logo {
+   		    	padding: 81px;
+   		    }
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<div class="card">
+		<div class="content">
+			
+			<div class="logo">
+				<img src="logo-mark.jpg" />
+			</div>
+
+			<div class="text">
+
+				<div class="name">David Dang</div>
+				<div class="title">Designer</div>
+
+			</div>
+
+			<div class="contact">
+				ddang@cca.com<br />
+				555-555-5555<br />
+				San Francisco, CA
+			</div>
+
+			<div class="bio"> orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.   </div>
+		</div>
+	</div>
+
+</body>
+</html>
