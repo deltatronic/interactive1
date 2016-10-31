@@ -1,0 +1,1715 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     
+  <title>
+    Project 2-Poster
+  </title>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+  	body {
+  		font-family: 'Permanent Marker', cursive;
+  		background-color:#000;
+  	}
+
+  	.stage {
+	  	border: 2px solid #000;
+	  	background-color: #FFFFFF;
+	  	opacity:1;
+	  	width: 800px;
+	  	height: 600px;
+	  	margin: 50px auto;
+	  	overflow: hidden; /* hide nested elements when it is outside the stage */
+	  	position: relative;
+	  }
+
+	  .whitebackground{
+  	 	background-color: green;
+  	 	margin:auto;
+  	 	width:800px;
+  	 	height:600px;
+  	 	z-index:1000;
+  	 }
+
+	  .button {
+		width: 250px;
+		height: 60px;
+		transition: all 0.25s ease;
+		text-align: center;
+		position:absolute;
+		cursor: pointer;	
+		line-height: 50px;
+		margin: auto;
+		bottom:100px;
+		top:400px;
+		left:300px;
+		color:#ffffff;
+		background-color: #000000;
+		z-index:300;
+		}
+
+	.growingdot{ 
+		border-radius:50%;
+		background-color:#000;
+		margin:auto;
+		top: 300px;
+	    left:400px;
+		width:10px;
+		height:10px;
+		position:absolute;
+		transform-origin: 50% 50%;
+
+	}
+
+	.grow {
+		animation: grow 10s ease-in forwards;
+
+	}
+
+	.shrinkingdot{ 
+		border-radius:50%;
+		background-color:#000;
+		margin:auto;
+		top: 300px;
+	    left:400px;
+		width:800px;
+		height:800px;
+		position:absolute;
+		transform-origin: 50% 50%;	 
+	}
+
+	.shrink{
+		animation: shrink 4s ease-in forwards;
+
+	}
+
+  	.dot {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+		top:0px;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide{
+    	animation: topone 1s ease-in;
+    	animation-iteration-count: 10;
+	}	
+
+
+    .dot2 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		top:0px;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide2{
+    	animation: toptwo 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot3 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+		top:0px;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide3{
+    	animation: topthree 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+
+    .dot4 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+		top:0px;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide4{
+
+        animation: topfour 1s ease-in;
+        animation-iteration-count: 10;
+    }
+
+
+    .dot5 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+		top:0px;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+    .glide5{
+        animation: topfive 1s ease-in;
+        animation-iteration-count: 10;
+        }
+
+
+    .dot6 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+		top:0px;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide6{
+    	animation: topsix 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+	
+	.dot7 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide7{
+    	animation: bottomone 1s ease-in ;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot8 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide8{
+    	animation: bottomtwo 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot9 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide9{
+    	animation: bottomthree 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot10 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide10{
+    	animation: bottomfour 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot11 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide11{
+    	animation: bottomfive 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot12 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;	
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide12{
+    	animation: bottomsix 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot13 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide13{
+    	animation: leftone 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+
+
+    .dot14 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide14{
+    	animation: lefttwo 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot15 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+   	.glide15{
+    	animation: leftthree 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot16 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide16{
+    	animation: leftfour 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot17 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide17{
+    	animation: leftfive 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot18 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;	
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide18{
+    	animation: leftsix 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot19 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide19{
+    	animation: rightone 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot20 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+    .glide20{
+    	animation: righttwo 1s ease-in;
+    	animation-iteration-count: 10;
+    }
+
+    .dot21 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide21{
+    	animation: rightthree 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot22 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide22{
+    	animation: rightfour 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot23 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide23{
+    	animation: rightfive 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .dot24 {
+    	border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;	
+    	width: 20px;
+    	height: 20px;
+    	position: absolute;
+    }
+
+    .glide24{
+    	animation: rightsix 1s ease-in;
+    	animation-iteration-count: 10;
+
+    }
+
+    .box {
+				opacity: 0;
+				font-size: 40px;
+				color: #FFFFFF;
+				position: absolute;
+				text-align: center;
+				top:150px;
+				z-index:0;
+			}
+
+    .show {
+				animation: slide-reveal 2s  forwards;
+				animation-delay: 11s;
+			}
+
+	.dot25 {
+		border-radius:50%;
+    	opacity:0;
+		background-color: #000;
+		color: #000;
+		margin: auto;	
+    	width: 80px;
+    	height: 80px;
+    	position: absolute;
+		top: 300px;
+	    left:400px;
+		transform-origin: 50% 50%;
+    }
+
+    .glide25{
+    	animation: expand 1s forwards;
+    	animation-delay: 9s;
+    }
+
+     .yellowdot {
+  	 	border-radius:50%;
+    	opacity:0;
+		background-color: #F0E68C;
+		color: #F0E68C;
+		top:275px;
+		left:350px;
+		margin: auto;
+    	width: 80px;
+    	height: 80px;
+    	position: absolute;
+    	z-index:110;
+
+  	 }
+
+  	 .fan8{
+    	animation: opacityone 4s forwards;
+    	animation-delay:15s;
+    	
+    }
+
+	.pedal  {
+		background-image:url('pedal.png');
+   		height:176px;
+   		width:95px;
+   		opacity:0;
+   		left:340px;
+   		top:110px;
+   		position:absolute;
+   		z-index:100;
+   		transform-origin:50% 200px;
+  	 }	
+
+  	 .fan{
+  		animation: circling 1s linear forwards;
+    	animation-delay:20s;
+    	
+    }
+
+  	 .pedal2  {
+  	 	background-image:url('pedal2.png');
+   		height:176px;
+   		width:95px;
+   		opacity:0;
+   		left:340px;
+   		top:110px;
+   		position:absolute;
+   		z-index:100;
+   		transform-origin:50% 200px;
+  	 }
+
+  	 .fan2{
+  	 	animation: circling1 1s linear forwards;
+    	animation-delay:20s;
+    	
+    }
+
+  	 .pedal3  {
+  	 	background-image:url('pedal3.png');
+   		height:176px;
+   		width:95px;
+   		opacity:0;
+   		left:340px;
+   		top:110px;
+   		position:absolute;
+   		z-index:100;
+   		transform-origin:50% 200px;
+   		
+  	 }
+
+  	 .fan3{
+  	 	animation: circling2 1s linear forwards;
+    	animation-delay:20s;
+    }
+
+  	 .pedal4 {
+  	 	background-image:url('pedal4.png');
+   		height:176px;
+   		width:95px;
+   		opacity:0;
+   		left:340px;
+   		top:110px;
+   		position:absolute;
+   		z-index:100;
+   		transform-origin:50% 200px;
+  	 }
+
+  	 .fan4{
+    	animation: circling3 1s linear forwards;
+    	animation-delay:20s;
+    	
+    }
+
+  	 .pedal5  {
+  	 	background-image:url('pedal5.png');
+   		height:176px;
+   		width:95px;
+   		opacity:0;
+   		left:340px;
+   		top:110px;
+   		position:absolute;
+   		z-index:100;
+   		transform-origin:50% 200px;
+  	 }
+
+  	 .fan5{
+    	animation: circling4 1s linear forwards;
+    	animation-delay:20s;
+    	
+    }
+
+  	 .pedal6  {
+  	 	background-image:url('pedal6.png');
+   		height:176px;
+   		width:95px;
+   		opacity:0;
+   		left:340px;
+   		top:110px;
+   		position:absolute;
+   		z-index:100;
+   		transform-origin:50% 200px;
+  	 }
+
+  	 .fan6{
+    	animation: circling5 1s linear forwards;
+    	animation-delay:20s;
+    	
+    }
+
+  	 .pedal7  {
+  	 	background-image:url('pedal7.png');
+   		height:176px;
+   		width:95px;
+   		opacity:0;
+   		left:340px;
+   		top:110px;
+   		position:absolute;
+   		z-index:100;
+   		transform-origin:50% 200px;
+  	 }
+
+  	 .fan7{
+    	animation: circling6 1s linear forwards;
+    	animation-delay:20s;
+    	
+    }
+
+    .pedal8  {
+  	 	background-image:url('pedal8.png');
+   		height:176px;
+   		width:95px;
+   		opacity:0;
+   		left:340px;
+   		top:110px;
+   		position:absolute;
+   		z-index:100;
+   		transform-origin:50% 200px;
+  	 }
+
+  	 .fan8{
+    	animation: circling7 1s linear forwards;
+    	animation-delay:20s;
+    }
+
+    .pedal9  {
+  	 	background-image:url('pedal9.png');
+   		height:176px;
+   		width:95px;
+   		opacity:0;
+   		left:340px;
+   		top:110px;
+   		position:absolute;
+   		z-index:100;
+   		transform-origin:50% 200px;
+  	 }
+
+  	 .fan9{
+    	animation: circling8 1s linear forwards;
+    	animation-delay:20s;
+    }
+
+    .pedal10  {
+  	 	background-image:url('pedal10.png');
+   		height:176px;
+   		width:95px;
+   		opacity:0;
+   		left:340px;
+   		top:110px;
+   		position:absolute;
+   		transform-origin:50% 200px;
+  	 }
+
+  	 .fan10{
+    	animation: circling9 1s linear forwards;
+    	animation-delay:20s;
+    }
+
+    .pedal11  {
+  	 	background-image:url('pedal11.png');
+   		height:176px;
+   		width:95px;
+   		opacity:0;
+   		left:340px;
+   		top:110px;
+   		position:absolute;
+   		z-index:100;
+   		transform-origin:50% 200px;
+  	 }
+
+  	 .fan11{
+    	animation: circling10 1s linear forwards;
+    	animation-delay:20s;
+    }
+
+    .pedal12  {
+  	 	background-image:url('pedal12.png');
+   		height:176px;
+   		width:95px;
+   		opacity:0;
+   		left:340px;
+   		top:110px;
+   		position:absolute;
+   		z-index:100;
+   		transform-origin:50% 200px;
+  	 }
+
+  	 .fan12{
+    	animation: circling11 1s linear forwards;
+    	animation-delay:20s;
+    }
+
+    .stage2{
+    	width:100%;
+    	height:100%;
+    	background-color:black;
+    	position:absolute;
+    	top:0;
+    	z-index:80	;
+    	opacity:0;
+    }
+
+
+	  .showbox{
+    	animation: opacityone 2s forwards;
+    	animation-delay:14s;
+    	
+    }
+
+
+    .box2 {
+				opacity: 0;
+				font-size: 40px;
+				color: #FFFFFF;
+				position: absolute;
+				left:0px;
+				top:100px;
+				z-index:800;
+			}
+
+    .show2 {
+				animation: slide-revealtwo 2s  forwards;
+				animation-delay: 16s;
+			}
+
+	.box3 {
+				opacity: 0;
+				font-size: 40px;
+				color: #FFFFFF;
+				position: absolute;
+				left:0px;
+				top:200px;
+				z-index:800;
+			}
+
+    .show3 {
+				animation: slide-revealthree 2s  forwards;
+				animation-delay: 18s;
+			}
+
+
+	.box4 {
+				opacity: 0;
+				font-size: 40px;
+				color: #FFFFFF;
+				position: absolute;
+				left:0px;
+				top:300px;
+				z-index:800;
+			}
+		
+
+    .show4 {
+				animation: slide-revealfour 2s  forwards;
+				animation-delay: 20s;
+
+			}
+		
+
+	.box5 {
+				opacity: 0;
+				font-size: 40px;
+				color: #FFFFFF;
+				position: absolute;
+				left:0px;
+				top:350px;
+				z-index:900;
+			}
+		
+
+    .show5 {
+				animation: slide-revealfive 2s  forwards;
+				animation-delay: 22s;
+
+			}
+		
+
+	.box6 {
+				opacity:0;
+				font-size: 40px;
+				color: #FFFFFF;
+				position: absolute;
+				left:0px;
+				top:400px;
+				z-index:900;
+			}
+		
+
+    .show6 {
+				animation: slide-revealsix 2s  forwards;
+				animation-delay: 24s;
+
+			}
+		
+
+  	
+
+
+	@keyframes slide-reveal {
+			from {
+					opacity: 0;
+					transform: translate(0,0);
+			}
+			to {
+					opacity: 1;
+					transform: translate(50px,0);
+				}
+			}
+
+	@keyframes slide-revealtwo {
+			from {
+					opacity: 0;
+					transform: translate(0,0);
+			}
+			to {
+					opacity: 1;
+					transform: translate(100px,0);
+				}
+			}	
+			
+	@keyframes slide-revealthree {
+			from {
+					opacity: 0;
+					transform: translate(0,0);
+					
+			}
+			to {
+					opacity: 1;
+					transform: translate(100px,0);
+					
+				}
+			}	
+
+	@keyframes slide-revealfour {
+			from {
+					opacity: 0;
+					transform: translate(0,0);
+					
+			}
+			to {
+					opacity: 1;
+					transform: translate(100px,0);
+					
+				}
+			}
+
+	@keyframes slide-revealfive {
+			from {
+					opacity: 0;
+					transform: translate(0,0);
+					
+			}
+			to {
+					opacity: 1;
+					transform: translate(100px,0);
+					
+				}
+			}
+
+	@keyframes slide-revealsix {
+			from {
+					opacity: 0;
+					transform: translate(0,0);
+					
+			}
+			to {
+					opacity: 1;
+					transform: translate(100px,0);
+					
+				}
+			}
+
+    @keyframes grow{
+    	0% {
+    		transform: scale(1);
+    		z-index:40;
+
+    	}
+
+    	10% {
+    		transform: scale(5);
+    	}
+
+    	20% {
+    		transform: scale(3);
+    	}
+    	30% {
+    		transform: scale(10);
+    	}
+
+    	40% {
+    		transform: scale(3);
+    	}
+
+
+    	50% {
+    		transform: scale(20);
+    	}
+
+    	60% {
+    		transform: scale(3);
+    	}
+    	70% {
+    		transform: scale(30);
+    	}
+    	80% {
+    		transform: scale(3);
+    	}
+    	85% {
+    		transform: scale(40);
+    	}
+
+    	90% {
+    		transform: scale(5);
+
+    	}
+
+    	100% {
+    		transform: scale(86);
+    	}
+    	
+    }
+
+    @keyframes shrink{
+    	0% {
+    		transform: scale();
+    	}
+
+    	100% {
+    		transform: scale(4);
+    	}
+    	
+    }
+
+
+
+    /* TOP */
+	@keyframes topone {
+	  0% {
+	  	top: -300px;
+	    left: -10px;
+	    opacity:0;
+	 }
+
+	 
+	  100% { 
+	  	top: 300px;
+	    left: 400px;
+	    opacity:1;
+	  }
+	}
+
+	  @keyframes toptwo {
+	  0% {
+	  	top: -700px;
+	    left:100px;
+	    opacity:0;
+	 }
+
+
+	  100% { 
+	  	top: 300px;
+	    left: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes topthree {
+	  0% {
+	  	top: -600px;
+	    left:400px;
+	    opacity:0;
+	 }
+
+
+	  100% { 
+	  	top: 300px;
+	    left: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes topfour {
+	  0% {
+	  	top: -600px;
+	    left:500px;
+	    opacity:0;
+	 }
+
+
+	  100% { 
+	  	top: 300px;
+	    left: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes topfive {
+	  0% {
+	  	top: -400px;
+	    right:-30px;
+	    opacity:0;
+	 }
+
+
+	  100% { 
+	  	top: 300px;
+	    right: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes topsix {
+	  0% {
+	  	top: -200px;
+	    right:100px;
+	    opacity:0;
+	 }
+
+
+	  100% { 
+	  	top: 300px;
+	    right: 400px;
+	    opacity:1;
+	  }
+	}	
+
+	/*BOTTOM*/
+	@keyframes bottomone {
+	  0% {
+	  	bottom: -180px;
+	    left: -10px;
+	    opacity:0;
+	 }
+
+	  100% { 
+	  	bottom: 300px;
+	    left: 400px;
+	    opacity:1;
+	  }
+	}
+
+	  @keyframes bottomtwo {
+	  0% {
+	  	bottom: -400px;
+	    left:100px;
+	    opacity:0;
+	 }
+
+
+	  100% { 
+	  	bottom: 300px;
+	    left: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes bottomthree {
+	  0% {
+	  	bottom: -300px;
+	    left:400px;
+	    opacity:0;
+	 }
+
+
+	  100% { 
+	  	bottom: 300px;
+	    left: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes bottomfour {
+	  0% {
+	  	bottom: -400px;
+	    left:500px;
+	    opacity:0;
+	 }
+
+
+	  100% { 
+	  	bottom: 300px;
+	    left: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes bottomfive {
+	  0% {
+	  	bottom: -500px;
+	    right:-30px;
+	    opacity:0;
+	 }
+
+
+	  100% { 
+	  	bottom: 300px;
+	    right: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes bottomsix {
+	  0% {
+	  	bottom: -900px;
+	    right:100px;
+	    opacity:0;
+	 }
+
+
+	  100% { 
+	  	bottom: 300px;
+	    right: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes leftone {
+	  0% {
+	  	top:0px;
+	    left: -300px;
+	    opacity:0;
+	    
+	 }
+
+	  100% { 
+	  	top: 300px;
+	    left: 400px;
+	    opacity:1;
+	  }
+	}
+
+	  @keyframes lefttwo {
+	  0% {
+	  	top:200px;
+	    left:-800px
+	    opacity:0;
+	    
+	 }
+
+
+	  100% { 
+	  	top: 300px;
+	    left: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes leftthree {
+	  0% {
+	  	top:300px;
+	    left:-400px
+	    opacity:0;
+	    
+	 }
+
+
+	  100% { 
+	  	top: 300px;
+	    left: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes leftfour {
+	  0% {
+	  	top:400px;
+	  	left: -700px;
+	  	opacity:0;
+	  	
+	 }
+
+
+	  100% { 
+	  	top: 300px;
+	    left: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes leftfive {
+	  0% {
+	  	top:500px;
+	  	left:-400px;
+	  	opacity:0;
+	 }
+
+
+	  100% { 
+	  	top: 300px;
+	    left: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes leftsix {
+	  0% {
+	  	top:600px;
+	  	left:-100px;
+	  	opacity:0;
+	 }
+
+
+	  100% { 
+	  	top: 300px;
+	    left: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes rightone {
+	  0% {
+	  	top:0px;
+	    right: 0px;
+	    opacity:0;
+	    
+	 }
+
+	  100% { 
+	  	top: 300px;
+	    right: 400px;
+	    opacity:1;
+	  }
+	}
+
+	  @keyframes righttwo {
+	  0% {
+	  	top:200px;
+	    right:-200px;
+	    opacity:0;
+	    
+	 }
+
+
+	  100% { 
+	  	top: 300px;
+	    right: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes rightthree {
+	  0% {
+	  	top:300px;
+	    right:-300px;
+	    opacity:0;
+	    
+	 }
+
+
+	  100% { 
+	  	top: 300px;
+	    right: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes rightfour {
+	  0% {
+	  	top:400px;
+	  	right: -400px;
+	  	opacity:0;
+	  	
+	 }
+
+
+	  100% { 
+	  	top: 300px;
+	    right: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes rightfive {
+	  0% {
+	  	top:500px;
+	  	right:-500px;
+	  	opacity:0;
+	 }
+
+
+	  100% { 
+	  	top: 300px;
+	    right: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes rightsix {
+	  0% {
+	  	top:600px;
+	  	right:-600px;
+	  	opacity:0;
+	  	
+	  	
+	 }
+
+	  100% { 
+	  	top: 300px;
+	    right: 400px;
+	    opacity:1;
+	  }
+	}
+
+	@keyframes expand {
+	  0% {
+    		transform: scale(1);
+    		opacity:0;
+    	}
+
+	 
+	  100% { 
+    		transform: scale(80);
+    		opacity:1;
+    	}
+    }
+
+    @keyframes show {
+    	0% {
+    		opacity:0;
+    	}
+
+	 
+	  100% { 
+    		opacity:1;
+    	}
+
+    }
+
+    @keyframes whiteone {
+    	0% {
+    		opacity:1;
+    	}
+
+	 
+	  100% { 
+    		opacity:0;
+    	}
+
+    }
+
+    @keyframes opacityone{
+
+	0% {
+	    opacity:1;
+	 }
+
+	100% {
+	    opacity:1;
+	 }
+	}
+
+    @keyframes circling {
+	    from { 
+	    	transform:rotate(0deg); 
+	    	opacity:0;
+	    }
+	    to { 
+	    	transform:rotate(0deg); 
+	    	opacity:1;
+	    }
+	}
+
+	@keyframes circling1 {
+	    from { 
+	    	transform:rotate(0deg); 
+	    	opacity:0;
+	    }
+	    to { 
+	    	transform:rotate(30deg); 
+	    	opacity:1;
+	    }
+	}
+
+	@keyframes circling2 {
+	    from { 
+	    	transform:rotate(0deg); 
+	    	opacity:0;
+	    }
+	    to { 
+	    	transform:rotate(60deg);
+	    	opacity:1; 
+	    }
+	}
+
+	@keyframes circling3 {
+	    from { 
+	    	transform:rotate(0deg); 
+	    	opacity:0;
+	    }
+	    to { 
+	    	transform:rotate(90deg); 
+	    	opacity:1;
+	    }
+	}
+
+	@keyframes circling4 {
+	    from { 
+	    	transform:rotate(0deg); 
+	    	opacity:0;
+	    }
+	    to { 
+	    	transform:rotate(120deg); 
+	    	opacity:1;
+	    }
+	}
+
+	@keyframes circling5 {
+	    from { 
+	    	transform:rotate(0deg); 
+	    	opacity:0;
+	    }
+	    to { 
+	    	transform:rotate(150deg);
+	    	opacity:1; 
+	    }
+	}
+
+	@keyframes circling6 {
+	    from { 
+	    	transform:rotate(0deg); 
+	    	opacity:0;
+	    }
+	    to { 
+	    	transform:rotate(180deg); 
+	    	opacity:1;
+	    }
+	}
+
+	@keyframes circling7 {
+	    from { 
+	    	transform:rotate(0deg); 
+	    	opacity:0;
+	    }
+	    to { 
+	    	transform:rotate(210deg); 
+	    	opacity:1;
+	    }
+	}
+
+	@keyframes circling8 {
+	    from { 
+	    	transform:rotate(0deg); 
+	    	opacity:0;
+	    }
+	    to { 
+	    	transform:rotate(240deg); 
+	    	opacity:1;
+	    }
+	}
+
+	@keyframes circling9 {
+	    from { 
+	    	transform:rotate(0deg); 
+	    	opacity:0;
+	    }
+	    to { 
+	    	transform:rotate(270deg);
+	    	opacity:1; 
+	    }
+	}
+
+	@keyframes circling10 {
+	    from { 
+	    	transform:rotate(0deg); 
+	    	opacity:0;
+	    }
+	    to { 
+	    	transform:rotate(300deg);
+	    	opacity:1; 
+	    }
+	}
+
+	@keyframes circling11 {
+	    from { 
+	    	transform:rotate(0deg); 
+	    	opacity:0;
+	    }
+	    to { 
+	    	transform:rotate(330deg); 
+	    	opacity:1;
+	    }
+	}
+	
+
+	
+
+
+
+
+		 </style>
+
+	<script>
+
+			$(document).ready(function() {
+
+				$(".button").click(function(){
+					$(this).hide();
+				$('.growingdot').addClass('grow');
+				$('.dot').addClass('glide');
+				$('.dot2').addClass('glide2');
+				$('.dot3').addClass('glide3');
+				$('.dot4').addClass('glide4');
+				$('.dot5').addClass('glide5');
+				$('.dot6').addClass('glide6');
+				$('.dot7').addClass('glide7');
+				$('.dot8').addClass('glide8');
+				$('.dot9').addClass('glide9');
+				$('.dot10').addClass('glide10');
+				$('.dot11').addClass('glide11');
+				$('.dot12').addClass('glide12');
+				$('.dot13').addClass('glide13');
+				$('.dot14').addClass('glide14');
+				$('.dot15').addClass('glide15');
+				$('.dot16').addClass('glide16');
+				$('.dot17').addClass('glide17');
+				$('.dot18').addClass('glide18');
+				$('.dot19').addClass('glide19');
+				$('.dot20').addClass('glide20');
+				$('.dot21').addClass('glide21');
+				$('.dot22').addClass('glide22');
+				$('.dot23').addClass('glide23');
+				$('.dot24').addClass('glide24');
+				$('.dot25').addClass('glide25');
+				$('.text01').addClass('show');
+				$('.button2').addClass('helpbox');
+				$('.stage2').addClass('showbox');
+				$('.yellowdot').addClass('fan8');
+				$('.pedal').addClass('fan');
+				$('.pedal2').addClass('fan2');
+				$('.pedal3').addClass('fan3');
+				$('.pedal4').addClass('fan4');
+				$('.pedal5').addClass('fan5');
+				$('.pedal6').addClass('fan6');
+				$('.pedal7').addClass('fan7');
+				$('.pedal8').addClass('fan8');
+				$('.pedal9').addClass('fan9');
+				$('.pedal10').addClass('fan10');
+				$('.pedal11').addClass('fan11');
+				$('.pedal12').addClass('fan12');
+				$('.box2').addClass('show2');
+				$('.box3').addClass('show3');
+				$('.box4').addClass('show4');
+				$('.box5').addClass('show5');
+				$('.box6').addClass('show6');
+				
+				});
+			});
+
+	</script>
+
+
+ 
+</head>
+
+<body>
+
+<div class="stage"> 
+
+<div class="yellowdot"></div>
+
+<div class="pedal"> </div>
+<div class="pedal2"> </div>
+<div class="pedal3"> </div>
+<div class="pedal4"> </div>
+<div class="pedal5"> </div>
+<div class="pedal6"> </div>
+<div class="pedal7"> </div>
+<div class="pedal8"> </div>
+<div class="pedal9"> </div>
+<div class="pedal10"> </div>
+<div class="pedal11"> </div>
+<div class="pedal12"> </div>
+
+
+<div class= "dot"> </div>
+<div class= "dot2"> </div>
+<div class= "dot3"> </div>
+<div class= "dot4"> </div>
+<div class= "dot5"> </div>
+<div class= "dot6"> </div> 
+<div class= "dot7"> </div>
+<div class= "dot8"> </div>
+<div class= "dot9"> </div>
+<div class= "dot10"> </div>
+<div class= "dot11"> </div>
+<div class= "dot12"> </div> 
+<div class= "dot13"> </div> 
+<div class= "dot14"> </div>
+<div class= "dot15"> </div>
+<div class= "dot16"> </div>
+<div class= "dot17"> </div> 
+<div class= "dot18"> </div>
+<div class= "dot19"> </div> 
+<div class= "dot20"> </div> 
+<div class= "dot21"> </div>
+<div class= "dot22"> </div>
+<div class= "dot23"> </div>
+<div class= "dot24"> </div> 
+<div class= "dot25"> </div>
+
+
+
+
+
+<div class="growingdot"> </div>
+
+<div class="button"> F e e d  &nbsp;A n x i e t y</div>
+
+
+
+</div>
+
+<div class="box text01">Anxiety can get the best of you, <br>Only if you let it. </div>
+
+<div class="stage2">
+
+</div>
+
+
+<div class="box2"> With Help </div>
+
+<div class="box3"> Love </div>
+
+<div class="box4"> Support </div>
+
+<div class="box5"> and Mediation.</div>
+
+<div class="box6"> You can get through it. </div>
+
+
+
+
+
+</body>
+</html>
