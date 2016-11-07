@@ -5,6 +5,7 @@
 <head>
 
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
      
   <title>
@@ -12,6 +13,10 @@
   </title>
   <style>
   @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+  
+  
+ 
 
   	body {
   		font-family: 'Permanent Marker', cursive;
@@ -27,7 +32,10 @@
 	  	margin: 50px auto;
 	  	overflow: hidden; /* hide nested elements when it is outside the stage */
 	  	position: relative;
+   
 	  }
+
+    
 
 	  .whitebackground{
   	 	background-color: green;
@@ -37,20 +45,24 @@
   	 	z-index:1000;
   	 }
 
+
 	  .button {
-		width: 250px;
-		height: 60px;
+    font-family: 'Roboto', cursive;
+		width: 135px;
+		height: 30px;
 		transition: all 0.25s ease;
 		text-align: center;
 		position:absolute;
 		cursor: pointer;	
-		line-height: 50px;
-		margin: auto;
-		bottom:100px;
-		top:400px;
-		left:300px;
-		color:#ffffff;
+		line-height: 30px;
+    border-radius:35px;
+    padding: 20px;
+		margin: 0;
+    left:40%;
+		bottom:50px;
+		color:red;
 		background-color: #000000;
+    box-shadow: 2px 5px 5px #999999;
 		z-index:300;
 		}
 
@@ -59,7 +71,7 @@
 		background-color:#000;
 		margin:auto;
 		top: 300px;
-	    left:400px;
+	  left:400px;
 		width:10px;
 		height:10px;
 		position:absolute;
@@ -542,11 +554,11 @@
      .yellowdot {
   	 	border-radius:50%;
     	opacity:0;
-		background-color: #F0E68C;
-		color: #F0E68C;
-		top:275px;
-		left:350px;
-		margin: auto;
+		  background-color: #F0E68C;
+		  color: #F0E68C;
+	    top:275px;
+	   	left:350px;
+	   	margin: auto;
     	width: 80px;
     	height: 80px;
     	position: absolute;
@@ -555,7 +567,7 @@
   	 }
 
   	 .fan8{
-    	animation: opacityone 4s forwards;
+    	animation: opacityone 1s forwards;
     	animation-delay:15s;
     	
     }
@@ -573,8 +585,8 @@
   	 }	
 
   	 .fan{
-  		animation: circling 1s linear forwards;
-    	animation-delay:20s;
+  		animation: circling 9s linear forwards;
+    	animation-delay:17s;
     	
     }
 
@@ -591,8 +603,8 @@
   	 }
 
   	 .fan2{
-  	 	animation: circling1 1s linear forwards;
-    	animation-delay:20s;
+  	 	animation: circling1 9s linear forwards;
+    	animation-delay:17s;
     	
     }
 
@@ -610,8 +622,8 @@
   	 }
 
   	 .fan3{
-  	 	animation: circling2 1s linear forwards;
-    	animation-delay:20s;
+  	 	animation: circling2 9s linear forwards;
+    	animation-delay:17s;
     }
 
   	 .pedal4 {
@@ -627,8 +639,8 @@
   	 }
 
   	 .fan4{
-    	animation: circling3 1s linear forwards;
-    	animation-delay:20s;
+    	animation: circling3 9s linear forwards;
+    	animation-delay:17s;
     	
     }
 
@@ -645,8 +657,8 @@
   	 }
 
   	 .fan5{
-    	animation: circling4 1s linear forwards;
-    	animation-delay:20s;
+    	animation: circling4 9s linear forwards;
+    	animation-delay:17s;
     	
     }
 
@@ -663,8 +675,8 @@
   	 }
 
   	 .fan6{
-    	animation: circling5 1s linear forwards;
-    	animation-delay:20s;
+    	animation: circling5 9s linear forwards;
+    	animation-delay:17s;
     	
     }
 
@@ -681,8 +693,8 @@
   	 }
 
   	 .fan7{
-    	animation: circling6 1s linear forwards;
-    	animation-delay:20s;
+    	animation: circling6 9s linear forwards;
+    	animation-delay:17s;
     	
     }
 
@@ -699,8 +711,8 @@
   	 }
 
   	 .fan8{
-    	animation: circling7 1s linear forwards;
-    	animation-delay:20s;
+    	animation: circling7 9s linear forwards;
+    	animation-delay:17s;
     }
 
     .pedal9  {
@@ -716,8 +728,8 @@
   	 }
 
   	 .fan9{
-    	animation: circling8 1s linear forwards;
-    	animation-delay:20s;
+    	animation: circling8 9s linear forwards;
+    	animation-delay:17s;
     }
 
     .pedal10  {
@@ -728,12 +740,13 @@
    		left:340px;
    		top:110px;
    		position:absolute;
+      z-index:100;
    		transform-origin:50% 200px;
   	 }
 
   	 .fan10{
-    	animation: circling9 1s linear forwards;
-    	animation-delay:20s;
+    	animation: circling9 9s linear forwards;
+    	animation-delay:17s;
     }
 
     .pedal11  {
@@ -749,8 +762,8 @@
   	 }
 
   	 .fan11{
-    	animation: circling10 1s linear forwards;
-    	animation-delay:20s;
+    	animation: circling10 9s linear forwards;
+    	animation-delay:17s;
     }
 
     .pedal12  {
@@ -766,23 +779,24 @@
   	 }
 
   	 .fan12{
-    	animation: circling11 1s linear forwards;
-    	animation-delay:20s;
+    	animation: circling11 9s linear forwards;
+    	animation-delay:17s;
     }
 
     .stage2{
     	width:100%;
     	height:100%;
-    	background-color:black;
+    	background-color:#87CEEB;
     	position:absolute;
     	top:0;
+      left:0;
     	z-index:80	;
     	opacity:0;
     }
 
 
 	  .showbox{
-    	animation: opacityone 2s forwards;
+    	animation: opacityone 3s forwards;
     	animation-delay:14s;
     	
     }
@@ -793,14 +807,14 @@
 				font-size: 40px;
 				color: #FFFFFF;
 				position: absolute;
-				left:0px;
-				top:100px;
+				left:225px;
+				top:230px;
 				z-index:800;
 			}
 
     .show2 {
-				animation: slide-revealtwo 2s  forwards;
-				animation-delay: 16s;
+				animation: slide-revealtwo 3s  forwards;
+				animation-delay: 17s;
 			}
 
 	.box3 {
@@ -808,14 +822,14 @@
 				font-size: 40px;
 				color: #FFFFFF;
 				position: absolute;
-				left:0px;
-				top:150px;
+				left:250px;
+				top:310px;
 				z-index:800;
 			}
 
     .show3 {
-				animation: slide-revealthree 2s  forwards;
-				animation-delay: 17s;
+				animation: slide-revealthree 3s  forwards;
+				animation-delay: 19s;
 			}
 
 
@@ -824,15 +838,15 @@
 				font-size: 40px;
 				color: #FFFFFF;
 				position: absolute;
-				left:0px;
-				top:200px;
+				left:275px;
+				top:390px;
 				z-index:800;
 			}
 		
 
     .show4 {
-				animation: slide-revealfour 2s  forwards;
-				animation-delay: 18s;
+				animation: slide-revealfour 3s  forwards;
+				animation-delay: 21s;
 
 			}
 		
@@ -842,15 +856,15 @@
 				font-size: 40px;
 				color: #FFFFFF;
 				position: absolute;
-				left:0px;
-				top:250px;
+				left:300px;
+				top:470px;
 				z-index:900;
 			}
 		
 
     .show5 {
-				animation: slide-revealfive 2s  forwards;
-				animation-delay: 19s;
+				animation: slide-revealfive 3s  forwards;
+				animation-delay: 23s;
 
 			}
 		
@@ -860,15 +874,15 @@
 				font-size: 40px;
 				color: #FFFFFF;
 				position: absolute;
-				left:0px;
-				top:300px;
+				left:325px;
+				top:550px;
 				z-index:900;
 			}
 		
 
     .show6 {
-				animation: slide-revealsix 2s  forwards;
-				animation-delay: 20s;
+				animation: slide-revealsix 3s  forwards;
+				animation-delay: 25s;
 
 			}
 		
@@ -1422,7 +1436,7 @@
     @keyframes opacityone{
 
 	0% {
-	    opacity:1;
+	    opacity:0;
 	 }
 
 	100% {
@@ -1561,12 +1575,6 @@
 	    	opacity:1;
 	    }
 	}
-	
-
-	
-
-
-
 
 		 </style>
 
