@@ -1,0 +1,368 @@
+<!doctype html>
+
+
+<html lang="en">
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700i,800" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <title>
+    Novemer 2016
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <style>
+
+  body{
+  	font-family: 'Open Sans', sans-serif;
+  }
+
+  #calendar{
+  	width:100%;
+  }
+  #calendar a{
+  	color:#666;
+  	text-decoration:none;
+  }
+
+  #calendar ul{
+  	list-style:none;
+  	padding:0;
+  	margin:0;
+  	clear:both;
+  	width:100%;
+  }
+
+  #calendar li{
+  	display:block;
+  	float:left;
+  	width:14.2857142857%;
+  	padding:5px;
+  	box-sizing:border-box;
+  	border:1px solid #ccc;
+  	margin-right:-1px;
+  	margin-bottom:-1px;
+  }
+
+  #calendar ul.weekdays{
+  	height:40px;
+  	background:#333;
+  }
+
+  #calendar ul.weekdays li{
+  	text-align:center;
+  	text-transform:uppercase;
+  	line-height:20px;
+  	border:none !important;
+  	padding: 10px 6px;
+  	color:#fff;
+  	font-size:13px;
+
+  }
+
+  #calendar .days li{
+  	height: 180px;
+  }
+
+  #calendar .days li:hover{
+  	background:#eee;
+  }
+
+
+  #calendar .date {
+  	text-align:center;
+  	margin-bottom:5px;
+  	background:#333;
+  	color:#fff;
+  	width:40px;
+  	height:40px;
+  	line-height:40px;
+  	border-radius:50%;
+  	float:right;
+
+  }
+
+  .box{
+  		margin-left:25px;
+  		height: 180px;
+    	color: #FFF;
+    	background-size: cover; /* to extend or extract */
+    	background-position: center center; /* for vertical and horizontal of the image center */
+    	text-align: center;
+    	
+  	}
+
+  .p1{
+  		background-image:url('p1.jpg');
+  		transform: rotate(90deg);
+  		width:160px;
+  		
+  	}
+
+  .p2{
+  		background-image:url('p2.jpg');
+  		transform: rotate(90deg);
+  		width:160px;
+  	}
+
+  .button{ 
+  	position:fixed;
+  	background-color:#42f48c;
+  	width:80px;
+  	height:80px;
+  	bottom:50px;
+  	right:50px;
+  	font-size:5	0px;
+  	border-radius:50%;
+  	color:#fff;
+  	text-align:center;
+  	line-height:80px;
+   }
+
+   .calgroup{
+   	text-align: center;
+   	float:right;
+   	width:100%;
+   	margin:0 auto;	
+	overflow: auto;
+   }
+
+   .cal{
+		float: left;
+		font-size: 20px;
+		line-height: 50px; /* center the height of the circle */
+		margin: 15px;
+		border:1px solid #000000;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		cursor: pointer;
+   }
+
+
+  @media(max-width:768px){
+  	#calendar.weekdays, #calendar.other-month{
+  		display:none;
+  	}
+  	#calendar li{
+  		height:auto !important;
+  		border:1px solid #ededed;
+  		width:100%
+  		padding:10px;
+  		margin-bottom:1px;
+  	}
+  	#calendar .date{
+  		float:none;
+  	}
+  }
+
+  </style>
+</head>
+
+
+<body>
+
+<div class="line"></div>
+
+<div class="calgroup">
+		<div class=cal>Jan</div>
+		<div class=cal>Feb</div>
+		<div class=cal>Mar</div>
+		<div class=cal>Apr</div>
+		<div class=cal>May</div>
+		<div class=cal>Jun</div>
+		<div class=cal>Jul</div>
+		<div class=cal>Aug</div>
+		<div class=cal>Sep</div>
+		<div class=cal>Oct</div>
+		<div class=cal>Nov</div>
+		<div class=cal>Dec</div>
+	</div>
+
+<div class="button">+</div>
+
+
+<div class="project"></div>
+<div id="calendar-wrap">
+	<header>
+		<h1>November 2016</h1>
+	</header>
+
+	<div id="calendar">
+		<ul class="weekdays">
+			<li>Sunday</li>
+			<li>Monday</li>
+			<li>Tuesday</li>
+			<li>Wednesday</li>
+			<li>Thursday</li>
+			<li>Friday</li>
+			<li>Saturday</li>
+		</ul>
+		<ul class="days">
+			<li class="day other-month">
+				<div class="date">30</div>
+				<div class="p1 box"></div>	
+			</li>
+
+			<li class="day other-month">
+				<div class="date">31</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">1</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">2</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">3</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">4</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">5</div>
+			</li>
+			
+		</ul>	
+
+		<ul class="days">
+			<li class="day other-month">
+				<div class="date">6</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">7</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">8</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">9</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">10</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">11</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">12</div>
+					
+			</li>
+			
+		</ul>	
+
+		<ul class="days">
+			<li class="day other-month">
+				<div class="date">13</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">14</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">15</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">16</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">17</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">18</div>
+				<div class="p2 box"></div>	
+			</li>
+
+			<li class="day other-month">
+				<div class="date">19</div>
+			</li>
+			
+		</ul>
+
+		<ul class="days">
+			<li class="day other-month">
+				<div class="date">20</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">21</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">22</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">23</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">24</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">25</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">26</div>
+			</li>
+			
+		</ul>
+
+		<ul class="days">
+			<li class="day other-month">
+				<div class="date">27</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">28</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">29</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">30</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">1</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">2</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">3</div>
+			</li>
+			
+		</ul>
+		</div>
+
+		<ol>
+
+  
+
+
+</body>
+</html>
