@@ -1,0 +1,643 @@
+<!doctype html>
+
+
+<html lang="en">
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700i,800" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+   <!-- Add fancyBox -->
+	<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+	<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+  <title>
+    2016 October
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+
+  .fancybox {
+  		display: block;
+  	}
+
+  h1{
+  	text-align:center;
+  }
+
+  body{
+  	font-family: 'Open Sans', sans-serif;
+  }
+
+  #calendar{
+  	width:100%;
+  }
+  #calendar a{
+  	color:#666;
+  	text-decoration:none;
+  }
+
+  #calendar ul{
+  	list-style:none;
+  	padding:0;
+  	margin:0;
+  	clear:both;
+  	width:100%;
+  }
+
+  #calendar li{
+  	display:block;
+  	float:left;
+  	width:14.2857142857%;
+  	box-sizing:border-box;
+  	border:1px solid #ccc;
+  	margin-right:-1px;
+  	margin-bottom:-1px;
+  }
+
+  #calendar ul.weekdays{
+  	height:40px;
+  	background:#333;
+  }
+
+  #calendar ul.weekdays li{
+  	text-align:center;
+  	text-transform:uppercase;
+  	line-height:20px;
+  	border:none !important;
+  	padding: 10px 6px;
+  	color:#fff;
+  	font-size:13px;
+
+  }
+
+  #calendar .days li{
+  	height: 180px;
+  }
+
+  #calendar .days li:hover{
+  	background:#eee;
+  }
+
+
+  #calendar .date {
+  	text-align:center;
+  	margin-bottom:5px;
+  	color:#000;
+  	width:40px;
+  	height:40px;
+  	line-height:40px;
+  	float:right;
+
+  }
+
+  .box{
+	  	height: 170px;
+    	color: #FFF;
+    	background-size: cover; /* to extend or extract */
+    	background-position: center center; /* for vertical and horizontal of the image center */
+    	text-align: center;
+    	opacity:.7;
+    	margin:2%;
+    	
+  	}
+
+  .box:hover{
+	  	height: 170px;
+    	color: #FFF;
+    	background-size: cover; /* to extend or extract */
+    	background-position: center center; /* for vertical and horizontal of the image center */
+    	text-align: center;
+    	opacity:1;
+    	cursor: pointer;
+    	margin:2%;
+    	
+  	}
+
+
+  .p7{
+  		background-image:url('./octthumbnails/10.1.jpg');
+  	}
+
+  .p8{
+  		background-image:url('./octthumbnails/10.2.jpg');
+  	}
+
+  .p9{
+  		background-image:url('./octthumbnails/10.3.jpg');
+  	}
+  .p10{
+  		background-image:url('./octthumbnails/10.4.jpg');
+  	}
+  
+  .p11{
+  		background-image:url('./octthumbnails/10.5.jpg');
+  	}
+
+  .p12{
+  		background-image:url('./octthumbnails/10.6.jpg');
+  	}
+  .p13{
+  		background-image:url('./octthumbnails/10.7.jpg');
+  	}
+  .p14{	
+
+  		background-image:url('./octthumbnails/10.8.jpg');  		
+  	}
+
+  .p15{
+  		background-image:url('./octthumbnails/10.9.jpg');
+  	}
+
+  .p16{
+  		background-image:url('./octthumbnails/10.10.jpg');
+  	}
+
+  .p17{
+  		background-image:url('./octthumbnails/10.11.jpg');
+  	}
+  .p18{
+  		background-image:url('./octthumbnails/10.12.jpg');
+  	}
+
+  .p19{
+  		background-image:url('./octthumbnails/10.13.jpg');
+  	}
+
+  .p20{
+  		background-image:url('./octthumbnails/10.14.jpg');
+  	}
+  .p21{
+  		background-image:url('./octthumbnails/10.15.jpg');
+  	}
+  
+  .p22{
+  		background-image:url('./octthumbnails/10.17.jpg');
+  	}
+
+  .p23{
+  		background-image:url('./octthumbnails/10.18.jpg');
+  	}
+  .p24{
+  		background-image:url('./octthumbnails/10.20.jpg');
+  	}
+
+  .p25{
+  		background-image:url('./octthumbnails/10.25.jpg');
+  	}
+
+  .p26{
+  		background-image:url('./octthumbnails/10.26.jpg');
+  	}
+
+  .p27{
+  		background-image:url('./octthumbnails/10.27.jpg');
+  	}
+  .p28{
+  		background-image:url('./octthumbnails/10.28.jpg');
+  	}
+  .p29{
+  		background-image:url('./octthumbnails/10.30.jpg');
+  	}
+
+  .p30{
+  		background-image:url('./octthumbnails/10.31.jpg');
+  	}
+  
+  
+  .plus{ 
+  	position:fixed;
+  	background-color:#42f48c;
+  	width:80px;
+  	height:80px;
+  	bottom:50px;
+  	right:50px;
+  	font-size:25px;
+  	border-radius:50%;
+  	color:#fff;
+  	text-align:center;
+  	line-height:80px;
+  	z-index:100;
+   }
+
+   .calgroup{
+   	text-align: center;
+   	float:right;
+   	width:100%;
+   	margin:0 auto;	
+	overflow: auto;
+   }
+
+   .cal{
+		float: left;
+		font-size: 20px;
+		line-height: 50px; /* center the height of the circle */
+		margin: 15px;
+		border:1px solid #000000;
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+   }
+
+
+
+  @media(max-width:768px){
+  	#calendar.weekdays, #calendar.other-month{
+  		display:none;
+  	}
+  	#calendar li{
+  		height:auto !important;
+  		border:1px solid #ededed;
+  		width:100%
+  		padding:10px;
+  		margin-bottom:1px;
+  	}
+  	#calendar .date{
+  		float:none;
+  	}
+  }
+
+  </style>
+
+  <script>
+		$(document).ready(function() {
+			$(".various").fancybox({
+				maxWidth	: 800,
+				maxHeight	: 600,
+				fitToView	: false,
+				width		: '70%',
+				height		: '70%',
+				autoSize	: false,
+				closeClick	: false,
+				openEffect	: 'none',
+				closeEffect	: 'none'
+	});
+
+
+		$(".fancybox-thumb").fancybox({
+		prevEffect	: 'none',
+		nextEffect	: 'none',
+		helpers	: {
+			title	: {
+				type: 'outside'
+			},
+			thumbs	: {
+				width	: 50,
+				height	: 50
+			}
+		}
+	});
+});
+  </script>
+
+</head>
+
+
+<body>
+
+<div class="line"></div>
+
+<!--
+<div class="calgroup">
+		<button id="play-vid" class=cal>Jan</button>
+		<div class=cal>Feb</div>
+		<div class=cal>Mar</div>
+		<div class=cal>Apr</div>
+		<div class=cal>May</div>
+		<div class=cal>Jun</div>
+		<div class=cal>Jul</div>
+		<div class=cal>Aug</div>
+		<div class=cal>Sep</div>
+		<div class=cal>Oct</div>
+		<div class=cal>Nov</div>
+		<div class=cal>Dec</div>
+	</div> --> 
+
+<div class="plus">+</div>
+
+
+<div class="project"></div>
+<div id="calendar-wrap">
+	<header>
+
+		<h1><2016 October></h1>
+	</header>
+
+	<div id="calendar">	
+		<ul class="weekdays">
+			<li>Sunday</li>
+			<li>Monday</li>
+			<li>Tuesday</li>
+			<li>Wednesday</li>
+			<li>Thursday</li>
+			<li>Friday</li>
+			<li>Saturday</li>
+		</ul>
+		<ul class="days">
+			<li class="day other-month">
+			<div class="date"></div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date"></div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date"></div>			 
+			</li>
+
+			<li class="day other-month">
+				<div class="date"></div>
+				</a>
+			</li>
+
+			<li class="day other-month">
+				<div class="date"></div>				 
+			</li>
+
+			<li class="day other-month">
+				<div class="date"></div>				 
+			</li>
+
+			<li class="day other-month">
+				<a class="various" rel="fancybox-thumb-10-1" href="./octlarge/10.1.jpg">
+				<div class="date">1</div>
+				<div class="p7 box"></div>	
+				</a>
+
+				<a class="various" rel="fancybox-thumb-10-1" href="./octlarge/10.1.jpg" title="002">
+
+				<a class="various" rel="fancybox-thumb-10-1" href="./octlarge/10.1.jpg" title="003">
+
+				<a class="various" rel="fancybox-thumb-10-1" href="./octlarge/10.1.jpg" title="004">
+
+				<a class="various" rel="fancybox-thumb-10-1" href="./octlarge/10.1.jpg" title="005">
+				 
+			</li>
+			
+		</ul>	
+
+		<ul class="days">
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.2.jpg">
+				<div class="date">2</div>
+				<div class="p8 box"></div>	
+				</a>
+				 
+
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.3.jpg">
+				<div class="date">3</div>
+				<div class="p9 box"></div>	
+				</a>
+			 	
+
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.4.jpg">
+				<div class="date">4</div>
+				<div class="p10 box"></div>	
+				</a>
+				 
+
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.5.jpg">
+				<div class="date">5</div>
+				<div class="p11 box"></div>	
+				</a>
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.6.jpg">
+				<div class="date">6</div>
+				<div class="p12 box"></div>	
+				</a>
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.7.jpg">
+				<div class="date">7</div>
+				<div class="p13 box"></div>
+				</a>	
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.8.jpg">
+				<div class="date">8</div>
+				<div class="p14 box"></div>	
+				</a>
+				
+			</li>
+			
+		</ul>	
+
+		<ul class="days">
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.9.jpg">
+				<div class="date">9</div>
+				<div class="p15 box"></div>	
+				</a>
+
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.10.jpg">
+				<div class="date">10</div>
+				<div class="p16 box"></div>	
+				</a>
+				 
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.11.jpg">
+				<div class="date">11</div>
+				<div class="p17 box"></div>	
+				</a>
+				
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.12.jpg">
+				<div class="date">12</div>
+				<div class="p18 box"></div>	
+				</a>
+				
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.13.jpg">
+				<div class="date">13</div>
+				<div class="p19 box"></div>	
+				</a>
+					
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.14.jpg">
+				<div class="date">14</div>
+				<div class="p20 box"></div>	
+				</a>
+				
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.15.jpg">
+				<div class="date">15</div>
+				<div class="p21 box"></div>	
+				</a>
+				
+			</li>
+			
+		</ul>
+
+		<ul class="days">
+			<li class="day other-month">
+				<div class="date">16</div>
+				
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.17.jpg">
+				<div class="date">17</div>
+				<div class="p22 box"></div>	
+				</a>
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.18.jpg">
+				<div class="date">18</div>
+				<div class="p23 box"></div>	
+				</a>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">19</div>
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.20.jpg">
+				<div class="date">20</div>
+				<div class="p24 box"></div>	
+				</a>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">21</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">22</div>
+			</li>
+			
+		</ul>
+
+		<ul class="days">
+			<li class="day other-month">
+				<div class="date">23</div>
+			</li>
+
+			<li class="day other-month">
+				<div class="date">24</div>
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.25.jpg">
+				<div class="date">25</div>
+				<div class="p25 box"></div>	
+				</a>
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.26.jpg">
+				<div class="date">26</div>
+				<div class="p26 box"></div>	
+				</a>
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.27.jpg">
+				<div class="date">27</div>
+				<div class="p27 box"></div>	
+				</a>
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.28.jpg">
+				<div class="date">28</div>
+				<div class="p28 box"></div>	
+			</li>
+
+			<li class="day other-month">
+				<div class="date">29</div>
+			</li>
+			
+		</ul>
+
+		<ul class="days">
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.30.jpg">
+				<div class="date">30</div>
+				<div class="p29 box"></div>	
+				</a>
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/10.31.jpg">
+				<div class="date">31</div>
+				<div class="p30 box"></div>	
+				</a>
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/11.1.jpg">
+				<div class="date"></div>
+				<div class="p31 box"></div>	
+				</a>
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/11.2.jpg">
+				<div class="date"></div>
+				<div class="p32 box"></div>	
+				</a>
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/11.3.jpg">
+				<div class="date"></div>
+				<div class="p33 box"></div>	
+				</a>
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/11.4.jpg">
+				<div class="date"></div>
+				<div class="p34 box"></div>	
+				</a>
+			</li>
+
+			<li class="day other-month">
+				<a class="various" href="./octlarge/11.5.jpg">
+				<div class="date">	</div>
+				<div class="p35 box"></div>	
+				</a>
+			</li>
+			
+		</ul>
+		</div>
+
+		<ol>
+
+  
+
+
+</body>
+</html>
