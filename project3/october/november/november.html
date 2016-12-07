@@ -6,11 +6,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700i,800" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-   <!-- Add fancyBox -->
-	<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+  <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <title>
     2016 November
@@ -236,7 +238,7 @@
   	}
 
   
-  .plus{ 
+  .container{ 
   	position:fixed;
   	background-color:#42f48c;
   	width:80px;
@@ -270,6 +272,11 @@
 		cursor: pointer;
    }
 
+   img{
+   	width:15px;
+   	height:20px;
+   }
+
 
 
   @media(max-width:768px){
@@ -292,6 +299,7 @@
 
   <script>
 		$(document).ready(function() {
+			
 			$(".various").fancybox({
 				maxWidth	: 800,
 				maxHeight	: 600,
@@ -303,26 +311,16 @@
 				openEffect	: 'none',
 				closeEffect	: 'none',
 					helpers	: {
-				title	: {
-					type: 'outside'
-				},
-				thumbs	: {
-					width	: 50,
-					height	: 50,
-	                source  : function(current) {
-	                    return $(current.element).data('thumbnail');
-	                }
-				}
-		}
-	});
-
-
-		$(".fancybox-thumb").fancybox({
-		prevEffect	: 'none',
-		nextEffect	: 'none',
-		
-	});
-});
+						thumbs	: {
+							width	: 50,
+							height	: 50,
+			                source  : function(current) {
+			                    return $(current.element).data('thumbnail');
+			                }
+						}
+					}
+			});
+		});
   </script>
 
 </head>
@@ -348,14 +346,24 @@
 		<div class=cal>Dec</div>
 	</div> --> 
 
-<div class="plus">+</div>
+
+<div class="container">
+  <div class="dropup">
+    <button class="container"	data-toggle="dropdown">+
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#" >Add Event</a></li>
+      <li><a href="#">Filters-Mood</a></li>
+      <li><a href="#">Years</a></li>
+    </ul>
+  </div>
+</div>
 
 
 <div class="project"></div>
 <div id="calendar-wrap">
 	<header>
-
-		<h1>< 2016 November ></h1>
+		<h1><a href="../october.html"><img src="../arrows/leftarrow.png"></a>&nbsp;&nbsp;2016 November&nbsp;&nbsp;<img src="../arrows/rightarrow.png"></h1>
 	</header>
 
 	<div id="calendar">	
@@ -380,12 +388,12 @@
 			</li>
 
 			<li class="day other-month">
-				<a class="various" rel="fancybox-thumb-11-1" href="./novlarge/11.1.jpg" data-thumbnail="./novlarge/11.1.jpg" >
+				<a class="various" rel="fancybox-thumb-11-1" href="./novlarge/11.1.jpg" data-thumbnail="./novthumbnails/11.1.jpg" >
 				<div class="date">1</div>
 				<div class="p1 box"></div>
 				</a>
 
-				<a class="various" rel="fancybox-thumb-11-1" href="./novlarge/11.1a.jpg" data-thumbnail="./novlarge/11.1a.jpg" title="002">
+				<a class="various" rel="fancybox-thumb-11-1" href="./novlarge/11.1a.jpg" data-thumbnail="./novthumbnails/11.1.jpg" title="002">
 			 
 			</li>
 
