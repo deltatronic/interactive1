@@ -27,10 +27,6 @@
   		display: block;
   	}
 
-  h1{
-  	text-align:center;
-  }
-
   body{
   	font-family: 'Open Sans', sans-serif;
   }
@@ -94,10 +90,12 @@
   	height:40px;
   	line-height:40px;
   	float:right;
+  	font-weight:bold;
+  	font-size:15px;
 
   }
 
-  .box{
+   .box{
 	  	height: 170px;
     	color: #FFF;
     	background-size: cover; /* to extend or extract */
@@ -105,20 +103,38 @@
     	text-align: center;
     	opacity:.7;
     	margin:2%;
-
   	}
 
-  .box:hover{
+  	.box2{
 	  	height: 170px;
     	color: #FFF;
     	background-size: cover; /* to extend or extract */
     	background-position: center center; /* for vertical and horizontal of the image center */
     	text-align: center;
+    	opacity:.7;
+    	margin:2%;
+  	}
+
+  .box:hover{
+  	background-size: cover; /* to extend or extract */
+    	background-position: center center; /* for vertical and horizontal of the image center */
+    	text-align: center;
     	opacity:1;
     	cursor: pointer;
     	margin:2%;
+    	content:url('smile1.png');
 
-    	
+
+  	}
+
+  	.box2:hover{
+  	background-size: cover; /* to extend or extract */
+    	background-position: center center; /* for vertical and horizontal of the image center */
+    	text-align: center;
+    	opacity:1;
+    	cursor: pointer;
+    	margin:2%;
+    	content:url('sad.png')
   	}
 
 
@@ -213,8 +229,31 @@
   		background-image:url('./octthumbnails/10.31.jpg');
   	}
   
+  .p30{
+  		background-image:url('./octthumbnails/10.31.jpg');
+  	}
+
+  	.icon{
+  		content:url('calendar.png');
+  		position:relative;
+  		width:30px;
+  		height:30px;
+  		right:-50px;
+  	}
+
+  	.mood{
+  		content:url('moodfilter.png');
+  		position:relative;
+  		width:30px;
+  		height:30px;
+  		right:-70px;
+  	}
+
+
+
+  	
   
-  .container{ 
+  .button{ 
   	position:fixed;
   	background-color:#42f48c;
   	width:80px;
@@ -253,6 +292,21 @@
    	height:20px;
    }
 
+   .month{
+   	font-size:40px;
+   	text-align:center;
+   }
+
+   .left{
+   	position:absolute;
+   	left:0px;
+   }
+
+   .right{
+   	position:absolute;
+   	right:0px;
+   }
+
  
 
 
@@ -276,7 +330,8 @@
   </style>
 
   <script>
-		$(document).ready(function() {
+			$(document).ready(function() {
+			
 			$(".various").fancybox({
 				maxWidth	: 800,
 				maxHeight	: 600,
@@ -288,26 +343,30 @@
 				openEffect	: 'none',
 				closeEffect	: 'none',
 					helpers	: {
-				title	: {
-					type: 'outside'
-				},
-				thumbs	: {
-					width	: 50,
-					height	: 50,
-	                source  : function(current) {
-	                    return $(current.element).data('thumbnail');
-	                }
-				}
-		}
-	});
+						thumbs	: {
+							width	: 50,
+							height	: 50,
+			                source  : function(current) {
+			                    return $(current.element).data('thumbnail');
+			                }
+						}
+					}
+			});
 
+			$(".addevent").fancybox({
 
-		$(".fancybox-thumb").fancybox({
-		prevEffect	: 'none',
-		nextEffect	: 'none',
-		
+				maxWidth	: 500,
+				maxHeight	: 450,
+				fitToView	: false,
+				width		: '70%',
+				height		: '70%',
+				autoSize	: false,
+				closeClick	: 'none',
+				openEffect	: 'none',
+				closeEffect	: 'none',
+				padding		: 0,
+		});
 	});
-});
   </script>
 
 </head>
@@ -337,25 +396,25 @@
 	</div> --> 
 
 
-<div class="container">
-  <div class="dropup">
-    <button class="container"	data-toggle="dropdown">+
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a href="#">Add Event</a></li>
-      <li><a href="#">Filters-Mood</a></li>
-      <li><a href="#">Years</a></li>
-    </ul>
-  </div>
-</div>
+ <a class="addevent" rel="fancybox-add" href="addevent.jpg" >
+<div class="button">+</div></a>
 
 
 <div class="project"></div>
 <div id="calendar-wrap">
-	<header>
 
-		<h1><img src="arrows/leftarrow.png">&nbsp;&nbsp;2016 October&nbsp;&nbsp;<a href="november/november.html"><img src="arrows/rightarrow.png"></a>
-</h1>
+	<header>
+	<div class="month">
+
+	<div class="left"><img src="arrows/leftarrow.png"></div> 
+	<div class="right">
+	<a href="./november/november.html"> <img src="arrows/rightarrow.png"></a> </div>
+	2016 October&nbsp;&nbsp;&nbsp;<img class="icon"/>
+
+	<a class="addevent" rel="fancybox-add" href="smile.png" ><img class="mood"/></a> </div> 
+	
+
+
 	</header>
 
 	<div id="calendar">	
@@ -491,7 +550,7 @@
 			<li class="day other-month">
 				<a class="various" href="./octlarge/10.11.jpg">
 				<div class="date">11</div>
-				<div class="p17 box"></div>	
+				<div class="p17 box2"></div>	
 				</a>
 				
 			</li>
@@ -499,7 +558,7 @@
 			<li class="day other-month">
 				<a class="various" href="./octlarge/10.12.jpg">
 				<div class="date">12</div>
-				<div class="p18 box"></div>	
+				<div class="p18 box2"></div>	
 				</a>
 				
 			</li>
@@ -515,7 +574,7 @@
 			<li class="day other-month">
 				<a class="various" href="./octlarge/10.14.jpg">
 				<div class="date">14</div>
-				<div class="p20 box"></div>	
+				<div class="p20 box2"></div>	
 				</a>
 				
 			</li>
@@ -557,7 +616,7 @@
 			<li class="day other-month">
 				<a class="various" href="./octlarge/10.20.jpg">
 				<div class="date">20</div>
-				<div class="p24 box"></div>	
+				<div class="p24 box2"></div>	
 				</a>
 			</li>
 
@@ -617,7 +676,6 @@
 			<li class="day other-month">
 				<a class="various" href="./octlarge/10.30.jpg">
 				<div class="date">30</div>
-				<div class="p29 box"></div>	
 				</a>
 			</li>
 
@@ -629,39 +687,27 @@
 			</li>
 
 			<li class="day other-month">
-				<a class="various" href="./octlarge/11.1.jpg">
 				<div class="date"></div>
-				<div class="p31 box"></div>	
-				</a>
+				
+				
 			</li>
 
 			<li class="day other-month">
-				<a class="various" href="./octlarge/11.2.jpg">
 				<div class="date"></div>
-				<div class="p32 box"></div>	
-				</a>
+				
 			</li>
 
 			<li class="day other-month">
-				<a class="various" href="./octlarge/11.3.jpg">
 				<div class="date"></div>
-				<div class="p33 box"></div>	
-				</a>
 			</li>
 
 			<li class="day other-month">
-				<a class="various" href="./octlarge/11.4.jpg">
 				<div class="date"></div>
-				<div class="p34 box"></div>	
-				</a>
 			</li>
 
 			<li class="day other-month">
-				<a class="various" href="./octlarge/11.5.jpg">
 				<div class="date">	</div>
-				<div class="p35 box"></div>	
-				</a>
-			</li>
+				</li>
 			
 		</ul>
 		</div>
