@@ -122,7 +122,7 @@
     	opacity:1;
     	cursor: pointer;
     	margin:2%;
-    	content:url('smile1.png');
+    
 
 
   	}
@@ -134,8 +134,20 @@
     	opacity:1;
     	cursor: pointer;
     	margin:2%;
-    	content:url('sad.png');
+    
   	}
+
+  	.day{
+  	position:relative;
+  }
+
+  	.day:hover .smile{
+  	display:block;
+  }
+
+  	.day:hover .sad{
+  	display:block;
+  }
 
 
 
@@ -247,6 +259,30 @@
   		width:30px;
   		height:30px;
   		right:-70px;
+  	}
+
+  .smile{
+  		display:none;
+  		position:absolute;
+  		top:0;
+  		left:0;
+  		width:100%;
+  		height:100%;
+  		background-size:cover;
+  		background-position:center center;
+  		background-image:url('smile1.png');
+  	}
+
+  	.sad{
+  		display:none;
+  		position:absolute;
+  		top:0;
+  		left:0;
+  		width:100%;
+  		height:100%;
+  		background-size:cover;
+  		background-position:center center;
+  		background-image:url('sad.png');
   	}
 
 
@@ -456,7 +492,9 @@
 			<li class="day other-month">
 				<a class="various" rel="fancybox-thumb-10-1" href="./octlarge/10.1.jpg">
 				<div class="date">1</div>
-				<div class="p7 box"></div>	
+				<div class="p7 box"></div>
+				<div class="sad"></div>
+	
 				</a>
 
 				<a class="various" rel="fancybox-thumb-10-1" href="./octlarge/10.1.jpg" title="002">
@@ -476,6 +514,7 @@
 				<a class="various" href="./octlarge/10.2.jpg">
 				<div class="date">2</div>
 				<div class="p8 box"></div>	
+				<div class="smile"></div>
 				</a>
 				 
 
@@ -485,6 +524,7 @@
 				<a class="various" href="./octlarge/10.3.jpg">
 				<div class="date">3</div>
 				<div class="p9 box"></div>	
+				<div class="sad"></div>
 				</a>
 			 	
 
@@ -494,6 +534,7 @@
 				<a class="various" href="./octlarge/10.4.jpg">
 				<div class="date">4</div>
 				<div class="p10 box"></div>	
+				<div class="smile"></div>
 				</a>
 				 
 
@@ -503,6 +544,7 @@
 				<a class="various" href="./octlarge/10.5.jpg">
 				<div class="date">5</div>
 				<div class="p11 box"></div>	
+				<div class="smile"></div>
 				</a>
 			</li>
 
@@ -510,6 +552,7 @@
 				<a class="various" href="./octlarge/10.6.jpg">
 				<div class="date">6</div>
 				<div class="p12 box"></div>	
+				<div class="smile"></div>
 				</a>
 			</li>
 
@@ -517,6 +560,7 @@
 				<a class="various" href="./octlarge/10.7.jpg">
 				<div class="date">7</div>
 				<div class="p13 box"></div>
+				<div class="smile"></div>
 				</a>	
 			</li>
 
@@ -524,6 +568,7 @@
 				<a class="various" href="./octlarge/10.8.jpg">
 				<div class="date">8</div>
 				<div class="p14 box"></div>	
+				<div class="smile"></div>
 				</a>
 				
 			</li>
@@ -535,6 +580,7 @@
 				<a class="various" href="./octlarge/10.9.jpg">
 				<div class="date">9</div>
 				<div class="p15 box"></div>	
+				<div class="smile"></div>
 				</a>
 
 			</li>
@@ -543,6 +589,7 @@
 				<a class="various" href="./octlarge/10.10.jpg">
 				<div class="date">10</div>
 				<div class="p16 box"></div>	
+				<div class="smile"></div>
 				</a>
 				 
 			</li>
@@ -550,7 +597,8 @@
 			<li class="day other-month">
 				<a class="various" href="./octlarge/10.11.jpg">
 				<div class="date">11</div>
-				<div class="p17 box2"></div>	
+				<div class="p17 box2"></div>
+				<div class="smile"></div>	
 				</a>
 				
 			</li>
@@ -559,6 +607,7 @@
 				<a class="various" href="./octlarge/10.12.jpg">
 				<div class="date">12</div>
 				<div class="p18 box2"></div>	
+				<div class="smile"></div>
 				</a>
 				
 			</li>
@@ -567,6 +616,7 @@
 				<a class="various" href="./octlarge/10.13.jpg">
 				<div class="date">13</div>
 				<div class="p19 box"></div>	
+				<div class="smile"></div>
 				</a>
 					
 			</li>
@@ -575,6 +625,7 @@
 				<a class="various" href="./octlarge/10.14.jpg">
 				<div class="date">14</div>
 				<div class="p20 box2"></div>	
+				<div class="smile"></div>
 				</a>
 				
 			</li>
@@ -583,6 +634,7 @@
 				<a class="various" href="./octlarge/10.15.jpg">
 				<div class="date">15</div>
 				<div class="p21 box"></div>	
+				<div class="smile"></div>
 				</a>
 				
 			</li>
@@ -599,6 +651,7 @@
 				<a class="various" href="./octlarge/10.17.jpg">
 				<div class="date">17</div>
 				<div class="p22 box"></div>	
+				<div class="smile"></div>
 				</a>
 			</li>
 
@@ -606,6 +659,7 @@
 				<a class="various" href="./octlarge/10.18.jpg">
 				<div class="date">18</div>
 				<div class="p23 box"></div>	
+				<div class="smile"></div>
 				</a>
 			</li>
 
@@ -616,7 +670,8 @@
 			<li class="day other-month">
 				<a class="various" href="./octlarge/10.20.jpg">
 				<div class="date">20</div>
-				<div class="p24 box2"></div>	
+				<div class="p24 box2"></div>
+				<div class="sad"></div>	
 				</a>
 			</li>
 
@@ -643,6 +698,7 @@
 				<a class="various" href="./octlarge/10.25.jpg">
 				<div class="date">25</div>
 				<div class="p25 box"></div>	
+				<div class="smile"></div>
 				</a>
 			</li>
 
@@ -650,6 +706,7 @@
 				<a class="various" href="./octlarge/10.26.jpg">
 				<div class="date">26</div>
 				<div class="p26 box"></div>	
+				<div class="smile"></div>
 				</a>
 			</li>
 
@@ -657,6 +714,7 @@
 				<a class="various" href="./octlarge/10.27.jpg">
 				<div class="date">27</div>
 				<div class="p27 box"></div>	
+				<div class="smile"></div>
 				</a>
 			</li>
 
@@ -664,6 +722,7 @@
 				<a class="various" href="./octlarge/10.28.jpg">
 				<div class="date">28</div>
 				<div class="p28 box"></div>	
+				<div class="sad"></div>
 			</li>
 
 			<li class="day other-month">
@@ -676,6 +735,8 @@
 			<li class="day other-month">
 				<a class="various" href="./octlarge/10.30.jpg">
 				<div class="date">30</div>
+				<div class="p29 box"></div>
+				<div class="smile"></div>
 				</a>
 			</li>
 
@@ -683,6 +744,7 @@
 				<a class="various" href="./octlarge/10.31.jpg">
 				<div class="date">31</div>
 				<div class="p30 box"></div>	
+				<div class="smile"></div>
 				</a>
 			</li>
 

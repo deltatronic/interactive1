@@ -85,6 +85,18 @@
 
   }
 
+  .day{
+  	position:relative;
+  }
+
+  .day:hover .smile{
+  	display:block;
+  }
+
+  .day:hover .sad{
+  	display:block;
+  }
+
 
   #calendar .date {
   	text-align:center;
@@ -126,7 +138,7 @@
     	opacity:1;
     	cursor: pointer;
     	margin:2%;
-    	content:url('october/smile1.png');
+    	
 
 
   	}
@@ -138,7 +150,7 @@
     	opacity:1;
     	cursor: pointer;
     	margin:2%;
-    	content:url('october/sad.png');
+    	
   	}
 
 
@@ -334,6 +346,30 @@
   		right:-70px;
   	}
 
+  	.smile{
+  		display:none;
+  		position:absolute;
+  		top:0;
+  		left:0;
+  		width:100%;
+  		height:100%;
+  		background-size:cover;
+  		background-position:center center;
+  		background-image:url('october/smile1.png');
+  	}
+
+  	.sad{
+  		display:none;
+  		position:absolute;
+  		top:0;
+  		left:0;
+  		width:100%;
+  		height:100%;
+  		background-size:cover;
+  		background-position:center center;
+  		background-image:url('october/sad.png');
+  	}
+
 
 
   @media(max-width:768px){
@@ -459,6 +495,7 @@
 				<a class="various" rel="fancybox-thumb-11-1" href="./novlarge/11.1.jpg" data-thumbnail="./novthumbnails/11.1.jpg" >
 				<div class="date">1</div>
 				<div class="p1 box"></div>
+				<div class="smile"></div>
 
 				</a>
 
@@ -476,7 +513,8 @@
 			<li class="day other-month">
 				<a class="various" rel="fancybox-thumb-11-3" href="./novlarge/11.3.jpg">
 				<div class="date">3</div>
-				<div class="p2 box"></div>	
+				<div class="p2 box"></div>
+				<div class="smile"></div>	
 				</a>
 				 
 			</li>
@@ -485,6 +523,7 @@
 				<a class="various" rel="fancybox-thumb-11-4" href="./novlarge/11.4.jpg">			
 				<div class="date">4</div>
 				<div class="p3 box"></div>
+				<div class="smile"></div>
 				</a>	
 				 
 			</li>
@@ -493,6 +532,7 @@
 				<a class="various" rel="fancybox-thumb-11-5" href="./novlarge/11.5.jpg">
 				<div class="date">5</div>
 				<div class="p4 box"></div>	
+				<div class="sad"></div>
 				</a>
 				 
 			</li>
@@ -504,6 +544,8 @@
 				<a class="various" rel="fancybox-thumb-11-6" href="./novlarge/11.6.jpg" data-thumbnail="./novthumbnails/11.6.jpg" >
 				<div class="date">6</div>
 				<div class="p5 box"></div>
+				<div class="smile"></div>
+
 				</a>
 
 				<a class="various" rel="fancybox-thumb-11-6" href="./novlarge/11.6.1.jpg" data-thumbnail="./novthumbnails/11.6.1.jpg" >
@@ -524,6 +566,8 @@
 				<a class="various" rel="fancybox-thumb-11-7" href="./novlarge/11.7.jpg">				
 				<div class="date">7</div>
 				<div class="p6 box"></div>
+				<div class="smile"></div>
+
 				</a>
 			 	
 
@@ -532,7 +576,8 @@
 			<li class="day other-month">
 				<a class="various" rel="fancybox-thumb-11-8" href="./novlarge/11.8.jpg">
 				<div class="date">8</div>
-				<div class="p7 box"></div>	
+				<div class="p7 box"></div>
+				<div class="sad"></div>	
 				</a>
 
 				<a class="various" rel="fancybox-thumb-11-8" href="./novlarge/11.8a.jpg" data-thumbnail="./novthumbnails/11.1.jpg" >
@@ -548,6 +593,7 @@
 				<a class="various" href="./novlarge/11.9.jpg">
 				<div class="date">9</div>
 				<div class="p8 box2"></div>	
+				<div class="sad"></div>
 				</a>
 			</li>
 
@@ -555,6 +601,7 @@
 				<a class="various" href="./novlarge/11.10.jpg">
 				<div class="date">10</div>
 				<div class="p9 box2"></div>	
+				<div class="sad"></div>
 				</a>
 			</li>
 
@@ -562,13 +609,15 @@
 				<a class="various" href="./novlarge/11.11.jpg">
 				<div class="date">11</div>
 				<div class="p10 box2"></div>
+				<div class="smile"></div>
 				</a>	
 			</li>
 
 			<li class="day other-month">
 				<a class="various" href="./novlarge/11.12.jpg">
 				<div class="date">12</div>
-				<div class="p11 box2"></div>	
+				<div class="p11 box2"></div>
+				<div class="smile"></div>	
 				</a>
 				
 			</li>
@@ -580,6 +629,7 @@
 				<a class="various" href="./novlarge/11.13.jpg">
 				<div class="date">13</div>
 				<div class="p12 box"></div>	
+				<div class="smile"></div>
 				</a>
 
 			</li>
@@ -587,7 +637,8 @@
 			<li class="day other-month">
 				<a class="various" href="./novlarge/11.14.jpg">
 				<div class="date">14</div>
-				<div class="p13 box"></div>	
+				<div class="p13 box"></div>
+				<div class="smile"></div>	
 				</a>
 				 
 			</li>
@@ -596,6 +647,7 @@
 				<a class="various" href="./novlarge/11.15.jpg">
 				<div class="date">15</div>
 				<div class="p14 box"></div>	
+				<div class="smile"></div>
 				</a>
 				
 			</li>
@@ -603,7 +655,8 @@
 			<li class="day other-month">
 				<a class="various" href="./novlarge/11.16.jpg">
 				<div class="date">16</div>
-				<div class="p15 box"></div>	
+				<div class="p15 box"></div>
+				<div class="sad"></div>	
 				</a>
 				
 			</li>
@@ -612,6 +665,7 @@
 				<a class="various" rel="fancybox-thumb-11-17" href="./novlarge/11.17.jpg">
 				<div class="date">17</div>
 				<div class="p16 box"></div>	
+				<div class="smile"></div>
 				</a>
 
 				<a class="various" rel="fancybox-thumb-11-17" href="./novlarge/11.17a.jpg" data-thumbnail="./novthumbnails/11.17.jpg" >
@@ -626,6 +680,7 @@
 				<a class="various" href="./novlarge/11.18.jpg">
 				<div class="date">18</div>
 				<div class="p17 box"></div>	
+				<div class="smile"></div>
 				</a>
 				
 			</li>
@@ -634,6 +689,7 @@
 				<a class="various" href="./novlarge/11.19.jpg">
 				<div class="date">19</div>
 				<div class="p18 box"></div>	
+				<div class="smile"></div>
 				</a>
 				
 			</li>
@@ -645,6 +701,7 @@
 				<a class="various" href="./novlarge/11.20.jpg">
 				<div class="date">20</div>
 				<div class="p19 box"></div>	
+				<div class="smile"></div>
 				</a>
 
 				
@@ -654,6 +711,7 @@
 				<a class="various" href="./novlarge/11.21.jpg">
 				<div class="date">21</div>
 				<div class="p20 box"></div>	
+				<div class="smile"></div>
 				</a>
 			</li>
 
@@ -661,6 +719,7 @@
 				<a class="various" rel="fancybox-thumb-11-22" href="./novlarge/11.22.jpg">
 				<div class="date">22</div>
 				<div class="p21 box"></div>	
+				<div class="smile"></div>
 				</a>
 
 				<a class="various" rel="fancybox-thumb-11-22" href="./novlarge/11.22a.jpg" data-thumbnail="./novthumbnails/11.22.jpg" >
@@ -675,6 +734,7 @@
 				<a class="various" href="./novlarge/11.23.jpg">
 				<div class="date">23</div>
 				<div class="p22 box"></div>
+				<div class="smile"></div>
 				</a>
 
 			</li>
@@ -683,6 +743,7 @@
 				<a class="various" href="./novlarge/11.24.jpg">
 				<div class="date">24</div>
 				<div class="p23 box"></div>	
+				<div class="smile"></div>
 				</a>
 			</li>
 
@@ -690,6 +751,7 @@
 				<a class="various" href="./novlarge/11.25.jpg">
 				<div class="date">25</div>
 				<div class="p24 box"></div>
+				<div class="sad"></div>
 				</a>
 			</li>
 
@@ -697,6 +759,7 @@
 				<a class="various" href="./novlarge/11.26.jpg">
 				<div class="date">26</div>
 				<div class="p25 box"></div>
+				<div class="smile"></div>
 				</a>
 			</li>
 			
@@ -707,6 +770,7 @@
 				<a class="various" href="./novlarge/11.27.jpg">
 				<div class="date">27</div>
 				<div class="p26 box"></div>
+				<div class="smile"></div>
 				</a>
 
 			</li>
@@ -715,6 +779,7 @@
 				<a class="various" rel="fancybox-thumb-11-28" href="./novlarge/11.28.jpg">
 				<div class="date">28</div>
 				<div class="p27 box"></div>
+				<div class="smile"></div>
 				</a>
 
 				<a class="various" rel="fancybox-thumb-11-28" href="./novlarge/11.28a.jpg" data-thumbnail="./novthumbnails/11.22.jpg" >
@@ -732,6 +797,7 @@
 				<a class="various" href="./novlarge/11.29.jpg">
 				<div class="date">29</div>
 				<div class="p28 box"></div>	
+				<div class="smile"></div>
 				</a>
 			</li>
 
